@@ -2,12 +2,16 @@ import express from "express"
 
 const app=express();
 
-app.get('/info',(req,res) => {
+app.get('/app/info',(req,res) => {
     res.send('I am Shreyas Hadawale');
 })
 
-app.get('/age',(req,res) => {
+app.get('/app/age',(req,res) => {
     res.send('I am 18 years old');
+})
+
+app.get('/app/marks',(req,res) => {
+    res.send('I want 95%');
 })
 
 const port = process.env.PORT || 4518;
