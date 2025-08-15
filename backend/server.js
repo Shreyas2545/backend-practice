@@ -7,7 +7,7 @@ app.get('/app/info',(req,res) => {
 })
 
 app.get('/app',(req,res) => {
-    res.send('Learning Connecting Backend To Frontend');
+    res.send('<<<Learning Connecting Backend To Frontend>>>');
 })
 app.get('/app/age',(req,res) => {
     res.send('I am 18 years old');
