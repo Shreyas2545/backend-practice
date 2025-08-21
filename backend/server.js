@@ -15,8 +15,18 @@ const port = process.env.PORT || 4518;
 //     res.send('I want 95%');
 // })
 
+app.get('/app/age/category',(req,res) => {
+    res.send('I am teenager');
+})
 app.get('/app/age',(req,res) => {
     res.send('I am 18 years old');
+})
+app.get('/app/age/category',(req,res) => {
+    res.send('I am teenager');
+})
+
+app.get('/app/age/gender',(req,res) => {
+    res.send('I am male');
 })
 
 app.get('/app',(req,res) =>{
