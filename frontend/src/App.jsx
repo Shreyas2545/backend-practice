@@ -61,9 +61,9 @@
     return (
       <>
       <h1>This is a backend trial </h1>
-      {/* <h1>data Fetched from backend : {name} </h1>
+      <h1>data Fetched from backend : {name} </h1>
       <h1>data Fetched from backend : {age} </h1>
-      <h1>data Fetched from backend : {marks} </h1> */}
+      <h1>data Fetched from backend : {marks} </h1>
       <h3>data Fetched from backend : {aim} </h3>
       <h3>data Fetched from backend : {gender} </h3>
 
