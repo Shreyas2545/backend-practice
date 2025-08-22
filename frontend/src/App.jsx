@@ -68,7 +68,7 @@
       <h1>data Fetched from backend : {marks} </h1>
       <h3>data Fetched from backend : {aim} </h3>
       <h3>data Fetched from backend : {gender} </h3>
-      <h3>data Fetched from backend : {heightRef.current} ft </h3>
+      <h3>data Fetched from backend : {heightRef.current} ft</h3>
 
 
       </>
