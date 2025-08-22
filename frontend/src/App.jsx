@@ -1,4 +1,4 @@
-  import { useState , useEffect } from 'react'
+  import { useState , useEffect , useRef} from 'react'
   import axios from 'axios'
 
   function App() {
@@ -7,16 +7,8 @@
     const [marks,setMarks] = useState();
     const [aim,setAim] = useState();
     const [gender,setGender] = useState();
-    const[height,setHeight] = useState();
-    useEffect(() => {
-        axios.get('/app/height')
-        .then((response) => {
-          setHeight(response.data)
-        })
-        .catch((error)=>{ 
-          console.log(error); 
-        })
-      },[])
+    const heightRef = useRef("5.6");
+    
 
        useEffect(() => {
         axios.get('/app/age/gender')
@@ -46,7 +38,7 @@
         .catch((error)=>{
           console.log(error);
         })
-      })
+      },[])
 
   useEffect(() => {
         axios.get('/app/marks')
@@ -76,7 +68,7 @@
       <h1>data Fetched from backend : {marks} </h1>
       <h3>data Fetched from backend : {aim} </h3>
       <h3>data Fetched from backend : {gender} </h3>
-      <h3>data Fetched from backend : {height} </h3>
+      <h3>data Fetched from backend : {heightRef.current} ft </h3>
 
 
       </>
