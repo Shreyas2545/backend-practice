@@ -7,8 +7,18 @@
     const [marks,setMarks] = useState();
     const [aim,setAim] = useState();
     const [gender,setGender] = useState();
-    
+    const[height,setHeight] = useState();
     useEffect(() => {
+        axios.get('/app/height')
+        .then((response) => {
+          setHeight(response.data)
+        })
+        .catch((error)=>{ 
+          console.log(error); 
+        })
+      },[])
+
+       useEffect(() => {
         axios.get('/app/age/gender')
         .then((response) => {
           setGender(response.data)
@@ -66,6 +76,8 @@
       <h1>data Fetched from backend : {marks} </h1>
       <h3>data Fetched from backend : {aim} </h3>
       <h3>data Fetched from backend : {gender} </h3>
+      <h3>data Fetched from backend : {height} </h3>
+
 
       </>
     )

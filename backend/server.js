@@ -37,6 +37,10 @@ app.get('/app/aim',(req,res) =>{
     res.send(`Aim is to master backend`)
 })
 
+app.get('/app/height',(req,res) =>{
+    res.send(`My height is 5.6 ft`)
+})
+
 app.listen(port,(req,res) => {
      console.log(`server is runnign at http://localhost:${port}`)
 });
