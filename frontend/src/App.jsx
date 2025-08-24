@@ -8,7 +8,8 @@
     const [aim,setAim] = useState();
     const [gender,setGender] = useState();
     const heightRef = useRef("5.6");
-    
+    const [study,setStudy] = useState();
+
 
        useEffect(() => {
         axios.get('/app/age/gender')
@@ -20,15 +21,15 @@
         })
       },[])
 
-    useEffect(() => {
-        axios.get('/app/info')
-        .then((response) => {
-          setName(response.data)
-        })
-        .catch((error)=>{ 
-          console.log(error); 
-        })
-      },[])
+    // useEffect(() => {
+    //     axios.get('/app/info')
+    //     .then((response) => {
+    //       setName(response.data)
+    //     })
+    //     .catch((error)=>{ 
+    //       console.log(error); 
+    //     })
+    //   },[])
 
       useEffect(()=>{
         axios.get('/app/aim')
@@ -40,15 +41,25 @@
         })
       },[])
 
-  useEffect(() => {
-        axios.get('/app/marks')
-        .then((response) => {
-          setMarks(response.data)
+      useEffect(()=>{
+        axios.get('/app/name')
+        .then((response) =>{
+          setName(response.data)
         })
-        .catch((error)=>{ 
-          console.log(error); 
+        .catch((error)=>{
+          console.log(error);
         })
       },[])
+
+  // useEffect(() => {
+  //       axios.get('/app/marks')
+  //       .then((response) => {
+  //         setMarks(response.data)
+  //       })
+  //       .catch((error)=>{ 
+  //         console.log(error); 
+  //       })
+  //     },[])
 
   useEffect(() => {
         axios.get('/app/age')
@@ -60,16 +71,26 @@
         })
       },[])
 
+        useEffect(()=>{
+      axios.get('/app/study')
+      .then((response)=>{
+        setStudy(response.data)
+      })
+      .catch((error)=>{
+        console.log(error);
+        
+      })
+    },[])
     return (
       <>
       <h1>This is a backend trial </h1>
       <h1>data Fetched from backend : {name} </h1>
       <h1>data Fetched from backend : {age} </h1>
-      <h1>data Fetched from backend : {marks} </h1>
+      {/* <h1>data Fetched from backend : {marks} </h1> */}
       <h3>data Fetched from backend : {aim} </h3>
       <h3>data Fetched from backend : {gender} </h3>
       <h3>data Fetched from backend : {heightRef.current} ft</h3>
-
+      <h3>Study Information : {study}</h3>
 
       </>
     )

@@ -3,26 +3,12 @@ import express from "express"
 const app=express();
 
 const port = process.env.PORT || 4518;
-// app.get('/app/info',(req,res) => {
-//     res.send('I am Shreyas Hadawale');
-// })
-
-// app.get('/app',(req,res) => {
-//     res.send('<<<Learning Connecting Backend To Frontend>>>');
-// })
-
-// app.get('/app/marks',(req,res) => {
-//     res.send('I want 95%');
-// })
 
 app.get('/app/age/category',(req,res) => {
     res.send('I am teenager');
 })
 app.get('/app/age',(req,res) => {
     res.send('I am 18 years old');
-})
-app.get('/app/age/category',(req,res) => {
-    res.send('I am teenager');
 })
 
 app.get('/app/age/gender',(req,res) => {
@@ -39,6 +25,14 @@ app.get('/app/aim',(req,res) =>{
 
 app.get('/app/height',(req,res) =>{
     res.send(`My height is 5.6 ft`)
+})
+
+app.get('/app/study',(req,res)=>{
+    res.send("I am a CO Student !")
+})
+
+app.get('/app/name',(req,res)=>{
+    res.send("shreyas hadawale here ");
 })
 
 app.listen(port,(req,res) => {
