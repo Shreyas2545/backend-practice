@@ -1,0 +1,23 @@
+{
+  "name": "learning",
+  "version": "1.0.0",
+  "description": "just learning",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shreyas2545/backend-practice.git"
+  },
+  "author": "Shreyas Hadawale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shreyas2545/backend-practice/issues"
+  },
+  "homepage": "https://github.com/Shreyas2545/backend-practice#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
